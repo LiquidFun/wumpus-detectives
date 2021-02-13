@@ -7,9 +7,22 @@
 
 [German README here](README_DE.md)
 
+
 WumpusDetectives is a multi-agent framework for the simulation of an extended [wumpus world](https://de.wikipedia.org/wiki/Wumpus-Welt).
 The world is simulated by the wumpusMonitor.
 The agents (wumpusDetective) can communicate with each other and with the monitor via a simple TCP-based protocol.
+
+
+## Showcase
+
+![Output CarefulAgent](media/agent_4_agents.gif)
+
+Summary of a wumpus world: pits (P) are surrounded by breezes (~), wumpi (W) are surrounded by stenches (~), gold (G), rocks (R), exits(O) and the moving agents (A). A wumpus world is fairly simple, each agent only knows the state it's currently on. If it steps on a wumpus or pit it dies. If it collects a gold piece it gains a reward. And leaving the world through the exit gains them a reward worth 10 gold pieces. 
+
+On the left you can see the state of the entire world. And on the right you can see the currently known state of the world by a single agent. You may notice that it suddenly reveals a huge portion of the world, this occurs due to communication between agents. Furthermore agents have 10 arrows, which they can use to kill wumpi, possibly creating new paths.
+
+The agents are non-learning, they are programmed to by a specific ruleset which they follow. They are always careful, so they collect all the gold they can, then kill wumpi which might reveal new information, and then they leave the world. 
+
 
 ## The Agents (wumpusDetective)
 
@@ -22,10 +35,6 @@ The rest of the project was developed by [meetunix](https://github.com/meetunix)
 
 [**Documentation for wumpusDetective**](wumpusDetective/README.md)
 
-
-**Example output of the monitor and an agent (CarefulAgent):**
-
-![Output CarefulAgent](media/agent_4_agents.gif)
 
 
 
