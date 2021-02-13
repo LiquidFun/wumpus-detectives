@@ -17,11 +17,11 @@ The agents (wumpusDetective) can communicate with each other and with the monito
 
 ![Output CarefulAgent](media/agent_4_agents.gif)
 
-Summary of a wumpus world: pits (P) are surrounded by breezes (~), wumpi (W) are surrounded by stenches (~), gold (G), rocks (R), exits(O) and the moving agents (A). A wumpus world is fairly simple, each agent only knows the state it's currently on. If it steps on a wumpus or pit it dies. If it collects a gold piece it gains a reward. And leaving the world through the exit gains them a reward worth 10 gold pieces. 
+Summary of a wumpus world: pits (`P`) are surrounded by breezes (`~`), wumpi (`W`) are surrounded by stenches (`~`), gold (`G`), rocks (`R`), exits (`O`) and the moving agents (`A`/`d`). A wumpus world is fairly simple, each agent only knows the state it's currently on. If it steps on a wumpus or pit it dies. If it collects a gold piece it gains a reward. And leaving the world through the exit gains them a reward worth 10 gold pieces. 
 
 On the left you can see the state of the entire world. And on the right you can see the currently known state of the world by a single agent. You may notice that it suddenly reveals a huge portion of the world, this occurs due to communication between agents. Furthermore agents have 10 arrows, which they can use to kill wumpi, possibly creating new paths.
 
-The agents are non-learning, they are programmed to by a specific ruleset which they follow. They are always careful, so they collect all the gold they can, then kill wumpi which might reveal new information, and then they leave the world. 
+The agents are non-learning, they are programmed to by a specific rule-set which they follow. They are always careful, so they collect all the gold they can, then kill wumpi which might reveal new information, and then they leave the world. This still results in fairly interesting behaviour as seen in the animation above.
 
 
 ## The Agents (wumpusDetective)
